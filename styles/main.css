@@ -1,2 +1,3 @@
-
-
+div.post:nth-child(even) {
+	background-color: lightgray;
+}
