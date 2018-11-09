@@ -32,6 +32,11 @@ let getAPIResponse = function(){
 	
 }
 
+let getEvenPosts = function(){
+	console.log("getting evens");
+	colPosts.getEvenPosts();
+}
+
 $(function(){
 	colPosts = new objPosts();
 	getAPIResponse();

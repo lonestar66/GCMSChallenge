@@ -17,7 +17,15 @@ class objPosts {
 		return this._dvContainer;
 	}
 	getEvenPosts(){
-		alert("evens")
+		this._clearDvContainer();
+		
+		$.each(this._aryPosts, $.proxy(function(ind, val, b){
+			if(ind%2===0){
+				this._dvContainer.append(val);
+			}
+		}, this))
+		
+		return this._dvContainer;
 	}
 	getOddPosts(){
 		alert("odds")
