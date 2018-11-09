@@ -9,14 +9,16 @@ let getAPIResponse = function(){
 			{
 				let objCur = data[i];
 								
-				let dvPst = $("<div class='post'></div>");
-				let spnTitle = $("<span></span>").text(objCur.title);
-				let spnBody = $("<span></span>").text(objCur.body);
-				let spnUser = $("<span></span>").text(objCur.userId);
+				let dvPst = $("<div class='post card'></div>");
+				let dvPstBody = $("<div class='card-body'></div>");
+				let spnTitle = $("<h5 class='card-title'></h5>").text(objCur.title);
+				let spnBody = $("<span class='card-text'></span>").text(objCur.body);
+				let spnUser = $("<footer class='blockquote-footer'></footer>").text(objCur.userId);
 				
-				dvPst.append(spnTitle);
-				dvPst.append(spnBody);
-				dvPst.append(spnUser);
+				dvPstBody.append(spnTitle);
+				dvPstBody.append(spnBody);
+				dvPstBody.append(spnUser);
+				dvPst.append(dvPstBody);
 				
 				let objPst = {
 					id: objCur.id,
