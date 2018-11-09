@@ -9,7 +9,7 @@ let getAPIResponse = function(){
 			{
 				let objCur = data[i];
 								
-				let dvPst = $("<div></div>");
+				let dvPst = $("<div class='post'></div>");
 				let spnTitle = $("<span></span>").text(objCur.title);
 				let spnBody = $("<span></span>").text(objCur.body);
 				let spnUser = $("<span></span>").text(objCur.userId);
@@ -33,8 +33,15 @@ let getAPIResponse = function(){
 }
 
 let getEvenPosts = function(){
-	console.log("getting evens");
 	colPosts.getEvenPosts();
+}
+
+let getOddPosts = function(){
+	colPosts.getOddPosts();
+}
+
+let getAllPosts = function(){
+	colPosts.getAllPosts();
 }
 
 $(function(){
